@@ -4,6 +4,7 @@
   "description": "listen to junglebus.gorillapool.io",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "@gorillapool/js-junglebus": "^0.4.1",
+    "@runonbitcoin/nimble": "^1.0.14",
     "dotenv": "^16.0.3"
   }
 }
