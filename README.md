@@ -10,7 +10,7 @@ graph TD;
 
 1. Create a [JungleBus](https://junglebus.gorillapool.io/) account
 1. Setup Subscriptions in JungleBus to listen to filtered events
-1. Specify a `JUNGLE_BUS_SUBSCRIPTION_ID` in `.env`
+1. For local development, specify a `JUNGLE_BUS_SUBSCRIPTION_ID` in `.env` (copied from `.env.sample`), and when deployed, set an ENV variable
 1. Push this repository to [Heroku](https://heroku.com) or [Fly.io](https://fly.io), as a Node.js application.
 
 When the app starts up, it will tune into the subscription,
