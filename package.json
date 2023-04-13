@@ -1,0 +1,14 @@
+{
+  "name": "jungle-bus-listener",
+  "version": "1.0.0",
+  "description": "listen to junglebus.gorillapool.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+
+  "private": true,
+  "type": "module"
+}
