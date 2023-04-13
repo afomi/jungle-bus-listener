@@ -10,6 +10,9 @@
   "license": "ISC",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=19.0.0"
+  },
   "dependencies": {
     "@gorillapool/js-junglebus": "^0.4.1",
     "dotenv": "^16.0.3"
