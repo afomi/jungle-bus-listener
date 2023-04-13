@@ -8,7 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@gorillapool/js-junglebus": "^0.4.1"
+  }
 }
