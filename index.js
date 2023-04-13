@@ -1,6 +1,7 @@
 import { JungleBusClient, ControlMessageStatusCode } from "@gorillapool/js-junglebus";
 import * as dotenv from 'dotenv'
 dotenv.config()
+import nimble from '@runonbitcoin/nimble'
 
 const client = new JungleBusClient("junglebus.gorillapool.io", {
     useSSL: true,
@@ -19,7 +20,12 @@ const client = new JungleBusClient("junglebus.gorillapool.io", {
 });
 
 const onPublish = function(tx) {
-    console.log("TRANSACTION", tx);
+  console.log("TRANSACTION", tx);
+
+  var transaction = nimble.Transaction.fromHex(tx.transaction);
+  // could be more than 1 though
+  var o1 = transaction.outputs[0]
+  var x = nimble.Script.fromBuffer(o1.script.buffer)
 };
 const onStatus = function(message) {
     if (message.statusCode === ControlMessageStatusCode.BLOCK_DONE) {
@@ -40,5 +46,5 @@ const onMempool = function(tx) {
 };
 
 (async () => {
-    await client.Subscribe(process.env.JUNGLE_BUS_SUBSCRIPTION_ID, 787390, onPublish, onStatus, onError, onMempool);
+    await client.Subscribe(process.env.JUNGLE_BUS_SUBSCRIPTION_ID, 787397, onPublish, onStatus, onError, onMempool);
 })();
